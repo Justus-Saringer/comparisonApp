@@ -7,6 +7,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
@@ -15,6 +16,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -38,6 +40,17 @@ fun MainScreen() {
 
     val scrollState = rememberLazyListState()
 
+    // title
+    Text(
+        modifier = Modifier
+            .padding(horizontal = 16.dp)
+            .fillMaxWidth(),
+        textAlign = TextAlign.Center,
+        text = "Jetpack Compose",
+        style = MaterialTheme.typography.h4
+    )
+
+    // buttons
     LazyVerticalGrid(
         modifier = Modifier
             .fillMaxSize()
@@ -46,14 +59,6 @@ fun MainScreen() {
         state = scrollState,
         contentPadding = PaddingValues(8.dp)
     ) {
-        item {
-            Text(
-                modifier = Modifier.padding(horizontal = 16.dp),
-                text = "Jetpack Compose",
-                style = MaterialTheme.typography.h4
-            )
-        }
-
         item {
             StartButton(
                 composeActivity = LayoutActivity::class.java,
