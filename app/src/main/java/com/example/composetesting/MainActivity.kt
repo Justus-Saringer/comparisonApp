@@ -58,12 +58,9 @@ fun MainScreen() {
             style = MaterialTheme.typography.h4
         )
 
-        RowWithTwoButtons(
-            composeActivity1 = LayoutActivity::class.java,
-            // TODO change Activity
-            composeActivity2 = LayoutActivity::class.java,
-            buttonText1 = "Layout",
-            buttonText2 = "Buttons",
+        StartButton(
+            composeActivity = LayoutActivity::class.java,
+            buttonText = "Layouts",
             backgroundColor = MaterialTheme.colors.secondary
         )
     }
