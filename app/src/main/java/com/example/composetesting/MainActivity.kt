@@ -3,19 +3,17 @@ package com.example.composetesting
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.Orientation
-import androidx.compose.foundation.gestures.scrollable
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.lazy.GridCells
+import androidx.compose.foundation.lazy.LazyVerticalGrid
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
@@ -34,35 +32,35 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun MainScreen() {
 
-    val scrollState = rememberScrollState()
+    val scrollState = rememberLazyListState()
 
-    Column(
+    LazyVerticalGrid(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colors.background)
-            .scrollable(
-                scrollState,
-                interactionSource = MutableInteractionSource(),
-                orientation = Orientation.Vertical
-            ),
-        verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally
+            .background(MaterialTheme.colors.background),
+        cells =GridCells.Adaptive(132.dp) ,
+        state = scrollState,
+        contentPadding = PaddingValues(8.dp)
     ) {
+        item {
+            Text(
+                modifier = Modifier.padding(horizontal = 16.dp),
+                text = "Jetpack Compose",
+                style = MaterialTheme.typography.h4
+            )
+        }
 
-        Text(
-            modifier = Modifier.padding(horizontal = 16.dp),
-            text = "Jetpack Compose",
-            style = MaterialTheme.typography.h4
-        )
-
-        StartButton(
-            composeActivity = LayoutActivity::class.java,
-            buttonText = "Layouts",
-            backgroundColor = MaterialTheme.colors.secondary
-        )
+        item {
+            StartButton(
+                composeActivity = LayoutActivity::class.java,
+                buttonText = "Layouts",
+                backgroundColor = MaterialTheme.colors.secondary
+            )
+        }
     }
 }
 

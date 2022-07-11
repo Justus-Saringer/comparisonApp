@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.composetesting.CompareButton
 
 class LayoutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +43,10 @@ class LayoutActivity : AppCompatActivity() {
 
 @Composable
 private fun LayoutScreen() {
+    CompareButton(
+        title = "ConstraintLayout",
 
+    )
 }
 
 @Preview(showBackground = true, showSystemUi = false, device = Devices.PIXEL_4)
