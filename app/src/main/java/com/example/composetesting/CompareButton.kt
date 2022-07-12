@@ -11,10 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
-import androidx.compose.material.Button
-import androidx.compose.material.Divider
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -23,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.composetesting.ui.theme.ComposeTestingTheme
 
 @Composable
 fun CompareButton(
@@ -65,7 +63,8 @@ fun CompareButton(
                 modifier = Modifier
                     .width(200.dp)
                     .padding(horizontal = 18.dp),
-                onClick = { context.startActivity(Intent(context, composeActivity)) }
+                onClick = { context.startActivity(Intent(context, composeActivity)) },
+                colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primaryVariant)
             ) {
                 Text(text = composeTitle)
             }
@@ -75,14 +74,16 @@ fun CompareButton(
                 modifier = Modifier
                     .width(200.dp)
                     .padding(horizontal = 18.dp),
-                onClick = { context.startActivity(Intent(context, androidViewActivity)) }
+                onClick = { context.startActivity(Intent(context, androidViewActivity)) },
+                colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primaryVariant)
             ) {
                 Text(text = viewTitle)
             }
         }
 
         Divider(
-            modifier = Modifier.padding(horizontal = 16.dp)
+            modifier = Modifier.padding(horizontal = 16.dp),
+            thickness = 2.dp
         )
     }
 }
@@ -90,7 +91,7 @@ fun CompareButton(
 @Preview
 @Composable
 fun CompareButtonPreview() {
-    MaterialTheme {
+    ComposeTestingTheme {
         CompareButton(title = "ConstraintLayout")
     }
 }

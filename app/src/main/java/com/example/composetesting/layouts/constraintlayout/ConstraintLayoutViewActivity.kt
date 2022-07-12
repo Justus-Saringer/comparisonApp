@@ -9,6 +9,5 @@ class ConstraintLayoutViewActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.constraintlayout)
-        supportActionBar?.title = "ConstraintLayout"
     }
 }

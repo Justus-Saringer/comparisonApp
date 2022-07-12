@@ -9,8 +9,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -29,21 +27,14 @@ class ConstraintLayoutComposeActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            MaterialTheme {
+            ComposeTestingTheme {
                 Scaffold(
                     topBar = {
                         TopAppBar(
                             title = {
                                 Text(text = "ConstraintLayout")
                             },
-                            navigationIcon = {
-                                IconButton(onClick = { onBackPressed() }) {
-                                    Icon(
-                                        imageVector = Icons.Default.ArrowBack,
-                                        contentDescription = null
-                                    )
-                                }
-                            }
+                            backgroundColor = MaterialTheme.colors.primary
                         )
                     }, content = {
                         ConstraintLayoutExample()
