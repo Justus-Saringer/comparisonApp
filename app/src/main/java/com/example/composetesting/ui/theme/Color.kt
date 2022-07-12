@@ -12,3 +12,8 @@ val Platinum = Color(0xFFDEE7E7)
 val BlueBell = Color(0xFFB7ADCF)
 val Cadet = Color(0xFF4F646F)
 val DavysGrey = Color(0xFF535657)
+
+val Orange200 = Color(0xFFFFCC80)
+val Green200 = Color(0xFFA5D6A7)
+val Blue200 = Color(0xFF90CAF9)
+val Red200 = Color(0xFFEF9A9A)
