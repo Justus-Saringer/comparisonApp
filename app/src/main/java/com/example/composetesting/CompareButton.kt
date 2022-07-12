@@ -1,7 +1,7 @@
 package com.example.composetesting
 
-import android.app.Activity
 import android.content.Intent
+import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,8 +27,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun CompareButton(
     modifier: Modifier = Modifier,
-    composeActivity: Class<out AppCompatActivity>? = null,
-    androidViewActivity: Class<out Activity>? = null,
+    composeActivity: Class<out ComponentActivity>? = null,
+    androidViewActivity: Class<out AppCompatActivity>? = null,
     title: String,
     backgroundColor: Color = Color.Unspecified,
     composeTitle: String = "Compose",

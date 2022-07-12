@@ -34,7 +34,12 @@
         <!-- ConstraintLayout Activities -->
 
         <activity
-            android:name=".layouts.constraintlayout.ConstraintLayoutView"
+            android:name=".layouts.constraintlayout.ConstraintLayoutViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".layouts.constraintlayout.ConstraintLayoutComposeActivity"
             android:exported="false"
             android:screenOrientation="locked" />
 
