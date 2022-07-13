@@ -1,3 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Compose testing</string>
+    <string name="compose_constraint">
+        val (text, button) = createRefs()\n\n
+
+        Text(\n
+            text = "This is a text",
+            modifier = Modifier.constrainAs(text) {
+                linkTo(
+                    parent.start,
+                    parent.end,
+                    bias = 0.3F
+                )
+            }
+        )
+
+        Button(
+            modifier = Modifier.constrainAs(button) {
+                bottom.linkTo(parent.bottom)
+                start.linkTo(parent.start)
+            }
+            onClick = { }
+        ) { Text("Hello World" )
+
+    </string>
 </resources>

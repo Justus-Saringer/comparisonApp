@@ -4,11 +4,8 @@ import android.content.Context
 import android.content.Intent
 import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme
@@ -16,6 +13,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composetesting.ui.theme.ComposeTestingTheme
@@ -36,8 +34,10 @@ fun CompareButtonRow(
         // compose button
         Button(
             modifier = Modifier
-                .width(200.dp)
-                .padding(horizontal = 18.dp),
+                .padding(horizontal = 18.dp)
+                .clip(RoundedCornerShape(10.dp))
+                .width(150.dp)
+                .height(56.dp),
             onClick = { context?.startActivity(Intent(context, composeActivity)) },
             colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primaryVariant)
         ) {
@@ -47,8 +47,10 @@ fun CompareButtonRow(
         // android view button
         Button(
             modifier = Modifier
-                .width(200.dp)
-                .padding(horizontal = 18.dp),
+                .padding(horizontal = 18.dp)
+                .clip(RoundedCornerShape(10.dp))
+                .width(150.dp)
+                .height(56.dp),
             onClick = { context?.startActivity(Intent(context, androidViewActivity)) },
             colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primaryVariant)
         ) {

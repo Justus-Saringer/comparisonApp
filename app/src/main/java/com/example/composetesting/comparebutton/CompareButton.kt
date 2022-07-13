@@ -44,7 +44,7 @@ fun CompareItem(
         // title
         Text(
             modifier = Modifier
-                .padding(start = 18.dp, bottom = 4.dp, top = 4.dp)
+                .padding(start = 18.dp, bottom = 4.dp, top = 8.dp)
                 .fillMaxWidth()
                 .align(Alignment.Start),
             text = title,
@@ -60,10 +60,8 @@ fun CompareItem(
             viewTitle = viewTitle
         )
 
-
-
         Divider(
-            modifier = Modifier.padding(horizontal = 16.dp),
+            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
             thickness = 2.dp
         )
     }
