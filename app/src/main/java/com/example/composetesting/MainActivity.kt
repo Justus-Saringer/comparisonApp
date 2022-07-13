@@ -23,6 +23,10 @@ import androidx.compose.ui.unit.dp
 import com.example.composetesting.layouts.LayoutActivity
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
+// TODO: set App Icon
+// TODO: turn off rotation and horizontal mode
+// TODO: change color of the top part in the app
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +70,38 @@ fun MainScreen() {
             StartButton(
                 composeActivity = LayoutActivity::class.java,
                 buttonText = "Layouts",
+                backgroundColor = MaterialTheme.colors.secondary
+            )
+        }
+
+        item {
+            StartButton(
+                composeActivity = null,
+                buttonText = "Buttons",
+                backgroundColor = MaterialTheme.colors.secondary
+            )
+        }
+
+        item {
+            StartButton(
+                composeActivity = null,
+                buttonText = "Bars",
+                backgroundColor = MaterialTheme.colors.secondary
+            )
+        }
+
+        item {
+            StartButton(
+                composeActivity = null,
+                buttonText = "RecyclerViews\nColumns",
+                backgroundColor = MaterialTheme.colors.secondary
+            )
+        }
+
+        item {
+            StartButton(
+                composeActivity = null,
+                buttonText = "Navigation",
                 backgroundColor = MaterialTheme.colors.secondary
             )
         }

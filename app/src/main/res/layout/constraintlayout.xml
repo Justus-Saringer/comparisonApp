@@ -9,9 +9,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="?attr/actionBarSize"
         android:layout_width="match_parent"
+        android:background="@color/davys_grey"
+        app:titleTextColor="@color/alice_blue"
         android:backgroundTint="@color/cadet"
-        android:layout_height="wrap_content"
         app:title="ConstraintLayout" />
 
     <TextView

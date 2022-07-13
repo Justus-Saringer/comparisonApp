@@ -10,7 +10,7 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.composetesting.CompareButton
+import com.example.composetesting.comparebutton.CompareItem
 import com.example.composetesting.layouts.constraintlayout.ConstraintLayoutComposeActivity
 import com.example.composetesting.layouts.constraintlayout.ConstraintLayoutViewActivity
 import com.example.composetesting.ui.theme.ComposeTestingTheme
@@ -39,10 +39,11 @@ class LayoutActivity : AppCompatActivity() {
 
 @Composable
 private fun LayoutScreen() {
-    CompareButton(
+    CompareItem(
         title = "ConstraintLayout",
         composeActivity = ConstraintLayoutComposeActivity::class.java,
-        androidViewActivity = ConstraintLayoutViewActivity::class.java
+        androidViewActivity = ConstraintLayoutViewActivity::class.java,
+
     )
 }
 
