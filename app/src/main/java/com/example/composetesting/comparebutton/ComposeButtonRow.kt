@@ -3,7 +3,6 @@ package com.example.composetesting.comparebutton
 import android.content.Context
 import android.content.Intent
 import androidx.activity.ComponentActivity
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
@@ -19,12 +18,10 @@ import androidx.compose.ui.unit.dp
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
 @Composable
-fun CompareButtonRow(
+fun ComposeButtonRow(
     context: Context? = null,
     composeActivity: Class<out ComponentActivity>? = null,
-    androidViewActivity: Class<out AppCompatActivity>? = null,
-    composeTitle: String,
-    viewTitle: String
+    composeTitle: String
 ) {
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -43,19 +40,6 @@ fun CompareButtonRow(
         ) {
             Text(text = composeTitle)
         }
-
-        // android view button
-        Button(
-            modifier = Modifier
-                .padding(horizontal = 18.dp)
-                .clip(RoundedCornerShape(10.dp))
-                .width(150.dp)
-                .height(56.dp),
-            onClick = { context?.startActivity(Intent(context, androidViewActivity)) },
-            colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primaryVariant)
-        ) {
-            Text(text = viewTitle)
-        }
     }
 }
 
@@ -64,6 +48,6 @@ fun CompareButtonRow(
 fun ButtonRowPreview() {
 
     ComposeTestingTheme {
-        CompareButtonRow(viewTitle = "View", composeTitle = "Compose")
+        ComposeButtonRow(composeTitle = "Compose")
     }
 }

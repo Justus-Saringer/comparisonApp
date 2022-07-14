@@ -24,7 +24,7 @@ import com.example.composetesting.ui.theme.ComposeTestingTheme
 @Composable
 fun CodeDialog(
     modifier: Modifier = Modifier,
-    codeID: String,
+    codeId: String,
     onDismiss: () -> Unit
 ) {
     Dialog(
@@ -39,12 +39,10 @@ fun CodeDialog(
                 .padding(8.dp)
         ) {
 
-            when (codeID) {
 
-            }
             Text(
                 modifier = Modifier.padding(16.dp),
-                text = "Hello World"
+                text = getCode(id = codeId)
             )
 
             Button(
@@ -61,10 +59,21 @@ fun CodeDialog(
     }
 }
 
+@Composable
+private fun getCode(id: String): String {
+
+    return when (id) {
+        "compose_constraint" -> stringResource(id = R.string.compose_constraint)
+        else -> {
+            "An error occurred!"
+        }
+    }
+}
+
 @Preview
 @Composable
 fun CodeDialogPreview() {
     ComposeTestingTheme {
-        CodeDialog(codeID = "constraint") {}
+        CodeDialog(codeId = "constraint") {}
     }
 }

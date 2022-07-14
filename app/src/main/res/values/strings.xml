@@ -5,23 +5,23 @@
         val (text, button) = createRefs()\n\n
 
         Text(\n
-            text = "This is a text",
-            modifier = Modifier.constrainAs(text) {
-                linkTo(
-                    parent.start,
-                    parent.end,
-                    bias = 0.3F
-                )
-            }
-        )
-
-        Button(
-            modifier = Modifier.constrainAs(button) {
-                bottom.linkTo(parent.bottom)
-                start.linkTo(parent.start)
-            }
-            onClick = { }
-        ) { Text("Hello World" )
-
+        \t\t\t    text = "This is a text",\n
+        \t\t\t    modifier = Modifier.constrainAs(text) {\n
+        \t\t\t\t\t\t        linkTo(\n
+        \t\t\t\t\t\t            parent.start,\n
+        \t\t\t\t\t\t            parent.end,\n
+        \t\t\t\t\t\t            parent.top\n
+        \t\t\t\t\t\t\t\t\t                )\n
+        \t\t\t\t\t\t            }\n
+        \t\t\t        )\n
+\n
+        Button(\n
+        \t\t\t    modifier = Modifier.constrainAs(button)\n
+        ) {\n
+        \t\t\t\t\t\t        bottom.linkTo(parent.bottom)\n
+        \t\t\t\t\t\t        start.linkTo(parent.start)\n
+        \t\t\t    }\n
+        \t\t\t    onClick = { }\n
+        ) { Text( \"Hello World\" )\n
     </string>
 </resources>

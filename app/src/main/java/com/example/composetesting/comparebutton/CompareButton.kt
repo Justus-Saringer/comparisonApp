@@ -29,8 +29,8 @@ fun CompareItem(
     backgroundColor: Color = Color.Unspecified,
     composeTitle: String = "Compose",
     viewTitle: String = "Android View",
-    composeCodeClick: ((String) -> Unit)? = null,
-    viewCodeClick: ((String) -> Unit)? = null
+    composeCodeClick: (() -> Unit)? = null,
+    viewCodeClick: (() -> Unit)? = null
 ) {
 
     val context = LocalContext.current
@@ -52,12 +52,17 @@ fun CompareItem(
             style = MaterialTheme.typography.h5
         )
 
-        CompareButtonRow(
+        ComposeButtonRow(
             context = context,
             composeActivity = composeActivity,
-            androidViewActivity = androidViewActivity,
             composeTitle = composeTitle,
-            viewTitle = viewTitle
+        )
+
+        ViewButtonRow(
+            context = context,
+            androidViewActivity = androidViewActivity,
+            viewTitle = viewTitle,
+            onIconClick = { viewCodeClick?.invoke() }
         )
 
         Divider(
