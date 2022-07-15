@@ -20,13 +20,14 @@ import com.example.composetesting.ui.theme.ComposeTestingTheme
 
 @Composable
 fun ViewButtonRow(
+    modifier: Modifier = Modifier,
     context: Context? = null,
     androidViewActivity: Class<out AppCompatActivity>? = null,
     viewTitle: String,
     onIconClick: () -> Unit
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
@@ -45,7 +46,8 @@ fun ViewButtonRow(
         IconButton(onClick = onIconClick) {
             Icon(
                 modifier = Modifier
-                    .size(36.dp),
+                    .padding(end = 24.dp)
+                    .size(48.dp),
                 imageVector = Icons.Outlined.HelpOutline,
                 contentDescription = null
             )
@@ -57,6 +59,6 @@ fun ViewButtonRow(
 @Composable
 fun ViewButtonRowPreview() {
     ComposeTestingTheme {
-        ViewButtonRow(viewTitle = "View"){ }
+        ViewButtonRow(viewTitle = "View") { }
     }
 }

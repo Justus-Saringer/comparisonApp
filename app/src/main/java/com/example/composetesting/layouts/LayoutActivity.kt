@@ -59,10 +59,13 @@ private fun LayoutScreen() {
                 composeActivity = ConstraintLayoutComposeActivity::class.java,
                 androidViewActivity = ConstraintLayoutViewActivity::class.java,
                 composeCodeClick = {
-                    isDialogShown = true
                     layoutId = "compose_constraint"
+                    isDialogShown = true
                 },
-                viewCodeClick = {}
+                viewCodeClick = {
+                    layoutId = "view_constraint"
+                    isDialogShown = true
+                }
             )
         }
     }

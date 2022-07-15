@@ -53,12 +53,15 @@ fun CompareItem(
         )
 
         ComposeButtonRow(
+            modifier = Modifier.padding(vertical = 4.dp),
             context = context,
             composeActivity = composeActivity,
             composeTitle = composeTitle,
+            onIconClick = { composeCodeClick?.invoke() }
         )
 
         ViewButtonRow(
+            modifier = Modifier.padding(vertical = 4.dp),
             context = context,
             androidViewActivity = androidViewActivity,
             viewTitle = viewTitle,
@@ -76,6 +79,6 @@ fun CompareItem(
 @Composable
 fun CompareButtonPreview() {
     ComposeTestingTheme {
-        CompareItem(title = "ConstraintLayout",)
+        CompareItem(title = "ConstraintLayout")
     }
 }
