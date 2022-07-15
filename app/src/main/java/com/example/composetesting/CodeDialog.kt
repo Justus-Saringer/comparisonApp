@@ -5,7 +5,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -27,6 +29,9 @@ fun CodeDialog(
     codeId: String,
     onDismiss: () -> Unit
 ) {
+
+    val scrollState = rememberScrollState()
+
     Dialog(
         onDismissRequest = onDismiss,
         properties = DialogProperties(usePlatformDefaultWidth = false)
@@ -36,9 +41,9 @@ fun CodeDialog(
                 .padding(16.dp)
                 .clip(RoundedCornerShape(10.dp))
                 .background(MaterialTheme.colors.background)
+                .verticalScroll(scrollState)
                 .padding(8.dp)
         ) {
-
 
             Text(
                 modifier = Modifier.padding(16.dp),
@@ -61,9 +66,9 @@ fun CodeDialog(
 
 @Composable
 private fun getCode(id: String): String {
-
     return when (id) {
         "compose_constraint" -> stringResource(id = R.string.compose_constraint)
+        "view_constraint" -> stringResource(id = R.string.view_constraint)
         else -> {
             "An error occurred!"
         }
