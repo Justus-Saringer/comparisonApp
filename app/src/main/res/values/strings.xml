@@ -24,4 +24,26 @@
         \t\t\t    onClick = { }\n
         ) { Text( \"Hello World\" )\n
     </string>
+    <string name="view_constraint">
+        &gt;?xml version="1.0" encoding="utf-8"?&lt;\n
+        &gt;androidx.constraintlayout.widget.ConstraintLayout\n
+        \t\t\txmlns:android="http://schemas.android.com/apk/res/android"\n
+        \t\t\txmlns:app="http://schemas.android.com/apk/res-auto"\n
+        \t\t\txmlns:tools="http://schemas.android.com/tools"\n
+        \t\t\tandroid:layout_width="match_parent"\n
+        \t\t\tandroid:layout_height="match_parent"&lt;\n
+        \n
+        &gt;TextView\n
+        \t\t\tandroid:id="@+id/textview"\n
+        \t\t\tandroid:text="this is a text"\n
+        \t\t\tapp:layout_constraintEnd_toEndOf="parent"\n
+        \t\t\tapp:layout_constraintStart_toStartOf="parent"\n
+        \t\t\tapp:layout_constraintTop_toTopOf="parent"&lt;\n
+        \n
+        &gt;Button\n
+        \t\t\tandroid:id="@+id/button"\n
+        \t\t\tandroid:text="this is a text"\n
+        \t\t\tapp:layout_constraintBottom_toBottomOf="parent"\n
+        \t\t\tapp:layout_constraintStart_toStartOf="parent"&lt;\n
+    </string>
 </resources>
