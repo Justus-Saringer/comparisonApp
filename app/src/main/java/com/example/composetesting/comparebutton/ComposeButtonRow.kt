@@ -27,9 +27,8 @@ fun ComposeButtonRow(
     Row(
         modifier = modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceEvenly
+        horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        // compose button
         Button(
             modifier = Modifier
                 .padding(horizontal = 18.dp)
