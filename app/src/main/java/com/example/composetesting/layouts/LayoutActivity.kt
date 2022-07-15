@@ -48,7 +48,7 @@ private fun LayoutScreen() {
 
     val scrollState = rememberScrollState()
     var isDialogShown by remember { mutableStateOf(false) }
-    var layoutId = ""
+    var layoutId by remember { mutableStateOf("") }
 
     LazyColumn(
         modifier = Modifier.scrollable(scrollState, Orientation.Vertical)
