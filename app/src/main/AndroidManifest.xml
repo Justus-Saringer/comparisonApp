@@ -43,6 +43,18 @@
             android:exported="false"
             android:screenOrientation="locked" />
 
+        <!-- LinearLayout Activities -->
+
+        <activity
+            android:name=".layouts.linearlayout.LinearLayoutViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".layouts.linearlayout.LinearLayoutComposeActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
     </application>
 
 </manifest>

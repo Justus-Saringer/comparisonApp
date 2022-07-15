@@ -14,7 +14,7 @@
         \t\t\t\t\t\t\t\t\t                )\n
         \t\t\t\t\t\t            }\n
         \t\t\t        )\n
-\n
+        \n
         Button(\n
         \t\t\t    modifier = Modifier.constrainAs(button)\n
         ) {\n
@@ -25,25 +25,50 @@
         ) { Text( \"Hello World\" )\n
     </string>
     <string name="view_constraint">
-        &gt;?xml version="1.0" encoding="utf-8"?&lt;\n
-        &gt;androidx.constraintlayout.widget.ConstraintLayout\n
-        \t\t\txmlns:android="http://schemas.android.com/apk/res/android"\n
-        \t\t\txmlns:app="http://schemas.android.com/apk/res-auto"\n
-        \t\t\txmlns:tools="http://schemas.android.com/tools"\n
+        &lt;?xml version="1.0" encoding="utf-8"?&gt;\n
+        &lt;androidx.constraintlayout.widget.ConstraintLayout\n
         \t\t\tandroid:layout_width="match_parent"\n
-        \t\t\tandroid:layout_height="match_parent"&lt;\n
+        \t\t\tandroid:layout_height="match_parent"&gt;\n
         \n
-        &gt;TextView\n
+        &lt;TextView\n
         \t\t\tandroid:id="@+id/textview"\n
         \t\t\tandroid:text="this is a text"\n
         \t\t\tapp:layout_constraintEnd_toEndOf="parent"\n
         \t\t\tapp:layout_constraintStart_toStartOf="parent"\n
-        \t\t\tapp:layout_constraintTop_toTopOf="parent"&lt;\n
+        \t\t\tapp:layout_constraintTop_toTopOf="parent"&gt;\n
         \n
-        &gt;Button\n
+        &lt;Button\n
         \t\t\tandroid:id="@+id/button"\n
         \t\t\tandroid:text="this is a text"\n
         \t\t\tapp:layout_constraintBottom_toBottomOf="parent"\n
-        \t\t\tapp:layout_constraintStart_toStartOf="parent"&lt;\n
+        \t\t\tapp:layout_constraintStart_toStartOf="parent"&gt;\n
+    </string>
+
+    <string name="view_linear">
+        &lt;?xml version="1.0" encoding="utf-8"?&gt;\n
+        &lt;LinearLayout\n
+        \t\t\tandroid:layout_width="match_parent"\n
+        \t\t\tandroid:layout_height="match_parent"\n
+        \t\t\tandroid:layout_gravity="center"\n
+        \t\t\tandroid:orientation="vertical"&gt;\n
+        \n
+        \t\t\t Here are your other elements\n
+        \n
+        &lt;/LinearLayout&gt;\n
+    </string>
+    <string name="compose_linear">
+        Column(\n
+            \t\t\tmodifier = modifier\n
+        ) {\n
+            \t\t\tHere are your Composables\n
+        }\n
+        \n
+        OR\n
+        \n
+        Row(\n
+            \t\t\tmodifier = modifier\n
+        ) {\n
+            \t\t\tHere are your Composables\n
+        }
     </string>
 </resources>

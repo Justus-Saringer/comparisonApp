@@ -69,6 +69,8 @@ private fun getCode(id: String): String {
     return when (id) {
         "compose_constraint" -> stringResource(id = R.string.compose_constraint)
         "view_constraint" -> stringResource(id = R.string.view_constraint)
+        "compose_linear" -> stringResource(id = R.string.compose_linear)
+        "view_linear" -> stringResource(id = R.string.view_linear)
         else -> {
             "An error occurred!"
         }
