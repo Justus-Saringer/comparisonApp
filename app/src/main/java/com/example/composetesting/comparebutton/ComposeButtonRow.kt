@@ -44,7 +44,7 @@ fun ComposeButtonRow(
         IconButton(onClick = onIconClick) {
             Icon(
                 modifier = Modifier
-                    .padding(end = 24.dp)
+                    .padding(horizontal = 24.dp)
                     .size(48.dp),
                 imageVector = Icons.Outlined.HelpOutline,
                 contentDescription = null
@@ -56,7 +56,6 @@ fun ComposeButtonRow(
 @Preview
 @Composable
 fun ButtonRowPreview() {
-
     ComposeTestingTheme {
         ComposeButtonRow(composeTitle = "Compose") { }
     }

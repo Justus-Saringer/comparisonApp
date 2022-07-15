@@ -7,8 +7,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Games
-import androidx.compose.material.icons.filled.QuestionAnswer
 import androidx.compose.material.icons.outlined.HelpOutline
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -42,11 +40,11 @@ fun ViewButtonRow(
         ) {
             Text(text = viewTitle)
         }
-        
+
         IconButton(onClick = onIconClick) {
             Icon(
                 modifier = Modifier
-                    .padding(end = 24.dp)
+                    .padding(horizontal = 24.dp)
                     .size(48.dp),
                 imageVector = Icons.Outlined.HelpOutline,
                 contentDescription = null
