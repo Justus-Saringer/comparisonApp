@@ -67,6 +67,18 @@
             android:exported="false"
             android:screenOrientation="locked" />
 
+        <!-- GridLayout Activities -->
+
+        <activity
+            android:name=".layouts.gridlayout.GridLayoutViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".layouts.gridlayout.GridLayoutComposeActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
     </application>
 
 </manifest>

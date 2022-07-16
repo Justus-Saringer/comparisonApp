@@ -22,7 +22,7 @@
         \t\t\t\t\t\t        start.linkTo(parent.start)\n
         \t\t\t    }\n
         \t\t\t    onClick = { }\n
-        ) { Text( \"Hello World\" )\n
+        ) { Text( \"Hello World\" )
     </string>
     <string name="view_constraint">
         &lt;?xml version="1.0" encoding="utf-8"?&gt;\n
@@ -41,7 +41,7 @@
         \t\t\tandroid:id="@+id/button"\n
         \t\t\tandroid:text="this is a text"\n
         \t\t\tapp:layout_constraintBottom_toBottomOf="parent"\n
-        \t\t\tapp:layout_constraintStart_toStartOf="parent"&gt;\n
+        \t\t\tapp:layout_constraintStart_toStartOf="parent"&gt;
     </string>
 
     <string name="view_linear">
@@ -54,7 +54,7 @@
         \n
         \t\t\t Here are your other elements\n
         \n
-        &lt;/LinearLayout&gt;\n
+        &lt;/LinearLayout&gt;
     </string>
     <string name="compose_linear">
         Column(\n
@@ -78,11 +78,30 @@
             \n
         \t\t\tHere are your other elements\n
         \n
-        &lt;/FrameLayout&gt;\n
+        &lt;/FrameLayout&gt;
     </string>
     <string name="compose_frame">
-        Box( ) {
-        \t\t\tHere are your composables
+        Box( ) {\n
+        \t\t\tHere are your composables\n
         }
+    </string>
+
+    <string name="view_grid">
+        &lt;GridLayout\n
+        \t\t\tandroid:layout_width="wrap_content"\n
+        \t\t\tandroid:layout_height="wrap_content"\n
+        \t\t\tandroid:columnCount="2"\n
+        \t\t\tandroid:rowCount="2"&gt;\n
+            \n
+        \t\t\tHere are your elements\n
+            \n
+        &lt;/GridLayout&gt;
+    </string>
+    <string name="compose_grid">
+    LazyVerticalGrid(\n
+        \t\t\tcells = GridCells.Fixed(2)\n
+    ) {\n
+        \t\t\tHere are your other composables\n
+    }
     </string>
 </resources>

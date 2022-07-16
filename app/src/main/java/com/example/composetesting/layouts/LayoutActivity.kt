@@ -21,6 +21,8 @@ import com.example.composetesting.layouts.constraintlayout.ConstraintLayoutCompo
 import com.example.composetesting.layouts.constraintlayout.ConstraintLayoutViewActivity
 import com.example.composetesting.layouts.framelyout.FrameLayoutComposeActivity
 import com.example.composetesting.layouts.framelyout.FrameLayoutViewActivity
+import com.example.composetesting.layouts.gridlayout.GridLayoutComposeActivity
+import com.example.composetesting.layouts.gridlayout.GridLayoutViewActivity
 import com.example.composetesting.layouts.linearlayout.LinearLayoutComposeActivity
 import com.example.composetesting.layouts.linearlayout.LinearLayoutViewActivity
 import com.example.composetesting.ui.theme.ComposeTestingTheme
@@ -97,7 +99,21 @@ private fun LayoutScreen() {
                 viewCodeClick = {
                     layoutId = "view_frame"
                     isDialogShown = true
+                }
+            )
+
+            CompareItem(
+                title = "GridLayout",
+                composeActivity = GridLayoutComposeActivity::class.java,
+                androidViewActivity = GridLayoutViewActivity::class.java,
+                composeCodeClick = {
+                    layoutId = "compose_grid"
+                    isDialogShown = true
                 },
+                viewCodeClick = {
+                    layoutId = "view_grid"
+                    isDialogShown = true
+                }
             )
         }
     }

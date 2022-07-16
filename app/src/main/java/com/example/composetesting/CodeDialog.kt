@@ -69,10 +69,15 @@ private fun getCode(id: String): String {
     return when (id) {
         "compose_constraint" -> stringResource(id = R.string.compose_constraint)
         "view_constraint" -> stringResource(id = R.string.view_constraint)
+
         "compose_linear" -> stringResource(id = R.string.compose_linear)
         "view_linear" -> stringResource(id = R.string.view_linear)
+
         "compose_frame" -> stringResource(id = R.string.compose_frame)
         "view_frame" -> stringResource(id = R.string.view_frame)
+
+        "compose_grid" -> stringResource(id = R.string.compose_grid)
+        "view_grid" -> stringResource(id = R.string.view_grid)
         else -> {
             "An error occurred!"
         }
