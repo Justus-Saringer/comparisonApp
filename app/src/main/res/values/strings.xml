@@ -71,4 +71,18 @@
             \t\t\tHere are your Composables\n
         }
     </string>
+
+    <string name="view_frame">
+        &lt;android:layout_width="match_parent"\n
+        \t\t\tandroid:layout_height="match_parent"&gt;\n
+            \n
+        \t\t\tHere are your other elements\n
+        \n
+        &lt;/FrameLayout&gt;\n
+    </string>
+    <string name="compose_frame">
+        Box( ) {
+        \t\t\tHere are your composables
+        }
+    </string>
 </resources>
