@@ -71,6 +71,8 @@ private fun getCode(id: String): String {
         "view_constraint" -> stringResource(id = R.string.view_constraint)
         "compose_linear" -> stringResource(id = R.string.compose_linear)
         "view_linear" -> stringResource(id = R.string.view_linear)
+        "compose_frame" -> stringResource(id = R.string.compose_frame)
+        "view_frame" -> stringResource(id = R.string.view_frame)
         else -> {
             "An error occurred!"
         }

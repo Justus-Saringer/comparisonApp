@@ -55,6 +55,18 @@
             android:exported="false"
             android:screenOrientation="locked" />
 
+        <!-- FrameLayout Activities -->
+
+        <activity
+            android:name=".layouts.framelyout.FrameLayoutViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".layouts.framelyout.FrameLayoutComposeActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
     </application>
 
 </manifest>

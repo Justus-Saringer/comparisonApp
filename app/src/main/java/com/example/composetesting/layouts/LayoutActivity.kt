@@ -19,6 +19,8 @@ import com.example.composetesting.CodeDialog
 import com.example.composetesting.comparebutton.CompareItem
 import com.example.composetesting.layouts.constraintlayout.ConstraintLayoutComposeActivity
 import com.example.composetesting.layouts.constraintlayout.ConstraintLayoutViewActivity
+import com.example.composetesting.layouts.framelyout.FrameLayoutComposeActivity
+import com.example.composetesting.layouts.framelyout.FrameLayoutViewActivity
 import com.example.composetesting.layouts.linearlayout.LinearLayoutComposeActivity
 import com.example.composetesting.layouts.linearlayout.LinearLayoutViewActivity
 import com.example.composetesting.ui.theme.ComposeTestingTheme
@@ -82,6 +84,20 @@ private fun LayoutScreen() {
                     layoutId = "view_linear"
                     isDialogShown = true
                 }
+            )
+
+            CompareItem(
+                title = "FrameLayout/Box",
+                composeActivity = FrameLayoutComposeActivity::class.java,
+                androidViewActivity = FrameLayoutViewActivity::class.java,
+                composeCodeClick = {
+                    layoutId = "compose_frame"
+                    isDialogShown = true
+                },
+                viewCodeClick = {
+                    layoutId = "view_frame"
+                    isDialogShown = true
+                },
             )
         }
     }
