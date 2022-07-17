@@ -145,4 +145,36 @@
             \t\t\tonValueChange = { text = it }\n
         )
     </string>
+
+    <string name="view_toggle">
+            &lt;ToggleButton\n
+                \t\t\tandroid:layout_width="wrap_content"\n
+                \t\t\tandroid:layout_height="wrap_content"/>
+    </string>
+    <string name="compose_toggle">
+    var buttonClicked by remember {\n
+        \t\t\tmutableStateOf(false)\n
+    }\n
+    \n
+    val buttonText: String\n
+    val buttonTextColor: Color\n
+    val buttonBackgroundColor: Color\n
+    \n
+    if (buttonClicked) {\n
+        \t\t\tbuttonText = "On"\n
+        \t\t\tbuttonTextColor = Color.Green\n
+        \t\t\tbuttonBackgroundColor = Color.LightGray\n
+    } else {\n
+        \t\t\tbuttonText = "Off"\n
+        \t\t\tbuttonTextColor = Color.Red\n
+        \t\t\tbuttonBackgroundColor = Color.Gray\n
+    }\n
+    \n
+    Button(\n
+        \t\t\tonClick = { buttonClicked = !buttonClicked },\n
+        \t\t\tcolors = ButtonDefaults.buttonColors(backgroundColor = buttonBackgroundColor)\n
+    ) {\n
+        \t\t\tText(text = buttonText, color = buttonTextColor)\n
+    }
+    </string>
 </resources>

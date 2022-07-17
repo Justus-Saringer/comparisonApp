@@ -33,12 +33,7 @@ class TextFieldComposeActivity : AppCompatActivity() {
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
-                        Box(
-                            modifier = Modifier.fillMaxSize(),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            TextFieldExample()
-                        }
+                        TextFieldExample()
                     }
                 }
             }
@@ -54,7 +49,7 @@ fun TextFieldExample() {
         modifier = Modifier.width(250.dp),
         value = text,
         onValueChange = { text = it },
-        placeholder = { Text(text = "This is a text")}
+        placeholder = { Text(text = "This is a text") }
     )
 }
 

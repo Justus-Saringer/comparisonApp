@@ -87,6 +87,9 @@ private fun getCode(id: String): String {
         
         "compose_textfield" -> stringResource(id = R.string.compose_textfield)
         "view_textfield" -> stringResource(id = R.string.view_textfield)
+
+        "compose_toggle" -> stringResource(id = R.string.compose_toggle)
+        "view_toggle" -> stringResource(id = R.string.view_toggle)
         else -> {
             "An error occurred!"
         }
