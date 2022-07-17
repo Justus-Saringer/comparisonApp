@@ -98,6 +98,18 @@
             android:exported="false"
             android:screenOrientation="locked" />
 
+        <!-- Text Activities -->
+
+        <activity
+            android:name=".buttonsandtexts.text.TextViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".buttonsandtexts.text.TextViewComposeActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
     </application>
 
 </manifest>

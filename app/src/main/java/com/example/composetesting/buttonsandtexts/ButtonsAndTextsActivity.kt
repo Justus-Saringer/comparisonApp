@@ -18,6 +18,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.composetesting.CodeDialog
 import com.example.composetesting.buttonsandtexts.button.ButtonComposeActivity
 import com.example.composetesting.buttonsandtexts.button.ButtonViewActivity
+import com.example.composetesting.buttonsandtexts.text.TextViewActivity
+import com.example.composetesting.buttonsandtexts.text.TextViewComposeActivity
 import com.example.composetesting.comparebutton.CompareItem
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
@@ -65,6 +67,22 @@ fun ButtonsScreen() {
                 },
                 viewCodeClick = {
                     layoutId = "view_button"
+                    isDialogShown = true
+                }
+            )
+        }
+
+        item {
+            CompareItem(
+                title = "Text",
+                composeActivity = TextViewComposeActivity::class.java,
+                androidViewActivity = TextViewActivity::class.java,
+                composeCodeClick = {
+                    layoutId = "compose_text"
+                    isDialogShown = true
+                },
+                viewCodeClick = {
+                    layoutId = "view_text"
                     isDialogShown = true
                 }
             )

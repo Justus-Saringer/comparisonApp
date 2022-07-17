@@ -116,4 +116,18 @@
         \t\t\tText(text = "This is a text")\n
         }
     </string>
+
+    <string name="view_text">
+        &lt;TextView\n
+            android:layout_width="wrap_content"\n
+            android:layout_height="wrap_content"\n
+            android:background="@color/red_200"\n
+            android:text="This is just a TextView"/&gt;
+    </string>
+    <string name="compose_text">
+        Text(\n
+        \t\t\tmodifier = Modifier.background(Red200),\n
+        \t\t\ttext = "This is text"\n
+        )
+    </string>
 </resources>
