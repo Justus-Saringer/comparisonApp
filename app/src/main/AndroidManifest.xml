@@ -134,6 +134,18 @@
             android:exported="false"
             android:screenOrientation="locked" />
 
+        <!-- RadioGroup Activities -->
+
+        <activity
+            android:name=".buttonsandtexts.radiogroups.RadioGroupComposeActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".buttonsandtexts.radiogroups.RadioGroupViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
     </application>
 
 </manifest>

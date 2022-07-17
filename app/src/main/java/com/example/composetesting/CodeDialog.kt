@@ -90,6 +90,9 @@ private fun getCode(id: String): String {
 
         "compose_toggle" -> stringResource(id = R.string.compose_toggle)
         "view_toggle" -> stringResource(id = R.string.view_toggle)
+
+        "compose_radio" -> stringResource(id = R.string.compose_radio)
+        "view_radio" -> stringResource(id = R.string.view_radio)
         else -> {
             "An error occurred!"
         }

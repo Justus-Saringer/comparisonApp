@@ -177,4 +177,50 @@
         \t\t\tText(text = buttonText, color = buttonTextColor)\n
     }
     </string>
+
+    <string name="view_radio">
+         &lt;RadioGroup\n
+            \t\t\tandroid:layout_width="match_parent"\n
+            \t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\tapp:layout_constrainedWidth="false">\n
+\n
+         \t\t\t&lt;RadioButton\n
+            \t\t\t\t\t\tandroid:layout_width="match_parent"\n
+            \t\t\t\t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\t\t\t\tandroid:text="First Radio Button" />\n
+\n
+         \t\t\t&lt;RadioButton\n
+            \t\t\t\t\t\tandroid:layout_width="match_parent"\n
+            \t\t\t\t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\t\t\t\tandroid:text="Second Radio Button" />\n
+\n
+     &lt;/RadioGroup>
+    </string>
+    <string name="compose_radio">
+    Column(\n
+        \t\t\tmodifier = Modifier.fillMaxSize(),\n
+        \t\t\tverticalArrangement = Arrangement.Center,\n
+        \t\t\thorizontalAlignment = Alignment.CenterHorizontally\n
+    ) {\n
+\n
+        \t\t\tstringList.forEach { item ->\n
+            \t\t\t\t\t\tRow(\n
+                \t\t\t\t\t\t\t\t\tverticalAlignment = Alignment.CenterVertically,\n
+                \t\t\t\t\t\t\t\t\tmodifier = Modifier\n
+                    \t\t\t\t\t\t\t\t\t\t\t\t.fillMaxWidth()\n
+                    \t\t\t\t\t\t\t\t\t\t\t\t.padding(horizontal = 16.dp)\n
+            \t\t\t\t\t\t) {\n
+                \t\t\t\t\t\t\t\t\tRadioButton(selected = rememberObserver == item,\n
+                    \t\t\t\t\t\t\t\t\t\t\t\tonClick = {\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\trememberObserver = item\n
+                    \t\t\t\t\t\t\t\t\t\t\t\t}\n
+                \t\t\t\t\t\t\t\t\t)\n
+                \t\t\t\t\t\t\t\t\tText(\n
+                 \t\t\t\t\t\t\t\t\t\t\t\t   text = item,\n
+                 \t\t\t\t\t\t\t\t\t\t\t\t   modifier = Modifier.clickable { rememberObserver = item }\n
+                \t\t\t\t\t\t)\n
+            \t\t\t\t\t\t}\n
+        \t\t\t}\n
+    }
+    </string>
 </resources>
