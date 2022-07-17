@@ -78,6 +78,9 @@ private fun getCode(id: String): String {
 
         "compose_grid" -> stringResource(id = R.string.compose_grid)
         "view_grid" -> stringResource(id = R.string.view_grid)
+        
+        "compose_button" -> stringResource(id = R.string.compose_button)
+        "view_button" -> stringResource(id = R.string.view_button)
         else -> {
             "An error occurred!"
         }

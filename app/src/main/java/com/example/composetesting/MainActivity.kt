@@ -22,6 +22,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.composetesting.buttonsandtexts.ButtonsAndTextsActivity
 import com.example.composetesting.layouts.LayoutActivity
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
@@ -79,8 +80,8 @@ fun MainScreen() {
 
         item {
             StartButton(
-                composeActivity = null,
-                buttonText = "Buttons",
+                composeActivity = ButtonsAndTextsActivity::class.java,
+                buttonText = "Buttons\nand\nTexts",
                 backgroundColor = MaterialTheme.colors.secondary
             )
         }

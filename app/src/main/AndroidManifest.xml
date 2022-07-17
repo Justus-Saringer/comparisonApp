@@ -31,6 +31,13 @@
             android:exported="false"
             android:screenOrientation="locked" />
 
+        <!-- ButtonsAndTextsActivity -->
+
+        <activity
+            android:name=".buttonsandtexts.ButtonsAndTextsActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
         <!-- ConstraintLayout Activities -->
 
         <activity
@@ -76,6 +83,18 @@
 
         <activity
             android:name=".layouts.gridlayout.GridLayoutComposeActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <!-- Button Activities -->
+
+        <activity
+            android:name=".buttonsandtexts.button.ButtonViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".buttonsandtexts.button.ButtonComposeActivity"
             android:exported="false"
             android:screenOrientation="locked" />
 

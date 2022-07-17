@@ -104,4 +104,16 @@
         \t\t\tHere are your other composables\n
     }
     </string>
+
+    <string name="view_button">
+    &lt;Button\n
+        \t\t\tandroid:layout_width="wrap_content"\n
+        \t\t\tandroid:layout_height="wrap_content"\n
+        \t\t\tandroid:text="This is a text"/&gt;
+    </string>
+    <string name="compose_button">
+        Button(onClick = {  }) {\n
+        \t\t\tText(text = "This is a text")\n
+        }
+    </string>
 </resources>
