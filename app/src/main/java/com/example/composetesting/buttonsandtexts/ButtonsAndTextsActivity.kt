@@ -20,6 +20,8 @@ import com.example.composetesting.buttonsandtexts.button.ButtonComposeActivity
 import com.example.composetesting.buttonsandtexts.button.ButtonViewActivity
 import com.example.composetesting.buttonsandtexts.text.TextViewActivity
 import com.example.composetesting.buttonsandtexts.text.TextViewComposeActivity
+import com.example.composetesting.buttonsandtexts.textfield.TextFieldViewActivity
+import com.example.composetesting.buttonsandtexts.textfield.TextFieldComposeActivity
 import com.example.composetesting.comparebutton.CompareItem
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
@@ -83,6 +85,22 @@ fun ButtonsScreen() {
                 },
                 viewCodeClick = {
                     layoutId = "view_text"
+                    isDialogShown = true
+                }
+            )
+        }
+
+        item {
+            CompareItem(
+                title = "TextField",
+                composeActivity = TextFieldComposeActivity::class.java,
+                androidViewActivity = TextFieldViewActivity::class.java,
+                composeCodeClick = {
+                    layoutId = "compose_textfield"
+                    isDialogShown = true
+                },
+                viewCodeClick = {
+                    layoutId = "view_textfield"
                     isDialogShown = true
                 }
             )

@@ -1,13 +1,13 @@
-package com.example.composetesting.buttonsandtexts.text
+package com.example.composetesting.buttonsandtexts.textfield
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.composetesting.R
 
-class TextViewActivity : AppCompatActivity() {
+class TextFieldViewActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.text)
+        setContentView(R.layout.textfield)
     }
 }

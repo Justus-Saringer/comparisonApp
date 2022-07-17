@@ -130,4 +130,19 @@
         \t\t\ttext = "This is text"\n
         )
     </string>
+
+    <string name="view_textfield">
+        &lt;com.google.android.material.textfield.TextInputEditText\n
+        \t\t\tandroid:layout_width="wrap_content"\n
+        \t\t\tandroid:layout_height="wrap_content"\n
+        \t\t\tandroid:text="This is a text"/&gt;
+    </string>
+    <string name="compose_textfield">
+        var text by remember { mutableStateOf("This is a text") }\n
+        \n
+        TextField(\n
+            \t\t\tvalue = text,\n
+            \t\t\tonValueChange = { text = it }\n
+        )
+    </string>
 </resources>

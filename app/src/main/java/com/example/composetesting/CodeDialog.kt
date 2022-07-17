@@ -84,6 +84,9 @@ private fun getCode(id: String): String {
 
         "compose_text" -> stringResource(id = R.string.compose_text)
         "view_text" -> stringResource(id = R.string.view_text)
+        
+        "compose_textfield" -> stringResource(id = R.string.compose_textfield)
+        "view_textfield" -> stringResource(id = R.string.view_textfield)
         else -> {
             "An error occurred!"
         }
