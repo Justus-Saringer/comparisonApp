@@ -1,5 +1,7 @@
 package com.example.composetesting
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,7 +22,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import androidx.core.content.ContextCompat.startActivity
 import com.example.composetesting.ui.theme.ComposeTestingTheme
+
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
@@ -93,6 +97,9 @@ private fun getCode(id: String): String {
 
         "compose_radio" -> stringResource(id = R.string.compose_radio)
         "view_radio" -> stringResource(id = R.string.view_radio)
+
+        "compose_recycler" -> stringResource(id = R.string.compose_recycler)
+        "view_recycler" -> "https://www.youtube.com/watch?v=UCddGYMQJCo"
         else -> {
             "An error occurred!"
         }

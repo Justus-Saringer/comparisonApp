@@ -24,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composetesting.buttonsandtexts.ButtonsAndTextsActivity
 import com.example.composetesting.layouts.LayoutActivity
+import com.example.composetesting.recyclerviewandcolumns.RecyclerViewAndColumnsActivity
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
 // TODO: set App Icon
@@ -96,7 +97,7 @@ fun MainScreen() {
 
         item {
             StartButton(
-                composeActivity = null,
+                composeActivity = RecyclerViewAndColumnsActivity::class.java,
                 buttonText = "RecyclerViews\nColumns",
                 backgroundColor = MaterialTheme.colors.secondary
             )

@@ -1,26 +1,21 @@
-package com.example.composetesting.layouts.linearlayout
+package com.example.composetesting.recyclerviewandcolumns
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.composetesting.ui.theme.BlueBell
-import com.example.composetesting.ui.theme.Cadet
 import com.example.composetesting.ui.theme.ComposeTestingTheme
-import com.example.composetesting.ui.theme.DavysGrey
 
-class LinearLayoutComposeActivity : ComponentActivity() {
+class ColumnComposeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -30,12 +25,12 @@ class LinearLayoutComposeActivity : ComponentActivity() {
                     topBar = {
                         TopAppBar(
                             title = {
-                                Text(text = "LinearLayout")
+                                Text(text = "Column")
                             },
                             backgroundColor = MaterialTheme.colors.primary
                         )
                     }, content = {
-                        LinearLayoutExample()
+                            ColumnExample()
                     }
                 )
             }
@@ -44,36 +39,22 @@ class LinearLayoutComposeActivity : ComponentActivity() {
 }
 
 @Composable
-fun LinearLayoutExample() {
+fun ColumnExample() {
     Column(
-        modifier = Modifier
-            .fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
-
     ) {
-        Text(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(BlueBell),
-            text = "Hello World",
-            textAlign = TextAlign.Center
-        )
-
-        Button(
-            modifier = Modifier
-                .fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(contentColor = Color.White),
-            onClick = { }) {
-            Text(text = "This is a button")
+        for (i in 1 .. 5) {
+            Button(onClick = { }) {
+                Text(text = "$i. Button")
+            }
         }
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, device = Devices.PIXEL_4, showSystemUi = true)
 @Composable
-fun LinearLayoutExamplePreview() {
-    ComposeTestingTheme {
-        LinearLayoutExample()
-    }
+fun ColumnExamplePreview() {
+    ColumnExample()
 }

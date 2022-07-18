@@ -235,4 +235,14 @@
         \t\t\t}\n
     }
     </string>
+
+    <string name="compose_recycler">
+    Column( ) {\n
+        \t\t\tfor (i in 1 .. 5) {\n
+            \t\t\t\t\t\tButton(onClick = { }) {\n
+                \t\t\t\t\t\t\t\t\tText(text = "$i. Button")\n
+            \t\t\t\t\t\t}\n
+        \t\t\t}\n
+    }
+    </string>
 </resources>

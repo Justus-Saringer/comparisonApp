@@ -24,6 +24,13 @@
             </intent-filter>
         </activity>
 
+        <!-- RecyclerViewAndColumnsActivity -->
+
+        <activity
+            android:name=".recyclerviewandcolumns.RecyclerViewAndColumnsActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
         <!-- LayoutActivity -->
 
         <activity
@@ -143,6 +150,18 @@
 
         <activity
             android:name=".buttonsandtexts.radiogroups.RadioGroupViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <!-- RecyclerViewAndColumns Activities -->
+
+        <activity
+            android:name=".recyclerviewandcolumns.RecyclerViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".recyclerviewandcolumns.ColumnComposeActivity"
             android:exported="false"
             android:screenOrientation="locked" />
 
