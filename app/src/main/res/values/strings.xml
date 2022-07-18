@@ -197,6 +197,8 @@
      &lt;/RadioGroup>
     </string>
     <string name="compose_radio">
+     var selectedItem by remember { mutableStateOf("") }\n
+\n
     Column(\n
         \t\t\tmodifier = Modifier.fillMaxSize(),\n
         \t\t\tverticalArrangement = Arrangement.Center,\n
@@ -204,21 +206,31 @@
     ) {\n
 \n
         \t\t\tstringList.forEach { item ->\n
+\n
+            \t\t\t\t\t\tval localInteractionSource = remember{ MutableInteractionSource()}\n
+\n
             \t\t\t\t\t\tRow(\n
                 \t\t\t\t\t\t\t\t\tverticalAlignment = Alignment.CenterVertically,\n
                 \t\t\t\t\t\t\t\t\tmodifier = Modifier\n
                     \t\t\t\t\t\t\t\t\t\t\t\t.fillMaxWidth()\n
                     \t\t\t\t\t\t\t\t\t\t\t\t.padding(horizontal = 16.dp)\n
-            \t\t\t\t\t\t) {\n
-                \t\t\t\t\t\t\t\t\tRadioButton(selected = rememberObserver == item,\n
-                    \t\t\t\t\t\t\t\t\t\t\t\tonClick = {\n
-                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\trememberObserver = item\n
+                    \t\t\t\t\t\t\t\t\t\t\t\t.clickable(\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tinteractionSource = localInteractionSource,\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tindication = null\n
+                    \t\t\t\t\t\t\t\t\t\t\t\t) {\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tselectedItem = item\n
                     \t\t\t\t\t\t\t\t\t\t\t\t}\n
+            \t\t\t\t\t\t) {\n
+                \t\t\t\t\t\t\t\t\tRadioButton(\n
+                    \t\t\t\t\t\t\t\t\t\t\t\tselected = selectedItem == item,\n
+                    \t\t\t\t\t\t\t\t\t\t\t\tonClick = {\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tselectedItem = item\n
+                    \t\t\t\t\t\t\t\t\t\t\t\t},\n
+                    \t\t\t\t\t\t\t\t\t\t\t\tinteractionSource = localInteractionSource\n
                 \t\t\t\t\t\t\t\t\t)\n
                 \t\t\t\t\t\t\t\t\tText(\n
-                 \t\t\t\t\t\t\t\t\t\t\t\t   text = item,\n
-                 \t\t\t\t\t\t\t\t\t\t\t\t   modifier = Modifier.clickable { rememberObserver = item }\n
-                \t\t\t\t\t\t)\n
+                    \t\t\t\t\t\t\t\t\t\t\t\ttext = item\n
+                \t\t\t\t\t\t\t\t\t)\n
             \t\t\t\t\t\t}\n
         \t\t\t}\n
     }

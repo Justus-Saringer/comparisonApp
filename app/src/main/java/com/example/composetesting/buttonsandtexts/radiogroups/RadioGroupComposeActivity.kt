@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
@@ -48,7 +49,7 @@ fun RadioGroupExample() {
         "Third Radio Button"
     )
 
-    var rememberObserver by remember { mutableStateOf("") }
+    var selectedItem by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -57,21 +58,30 @@ fun RadioGroupExample() {
     ) {
 
         stringList.forEach { item ->
+
+            val localInteractionSource = remember{ MutableInteractionSource()}
+
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
+                    .clickable(
+                        interactionSource = localInteractionSource,
+                        indication = null
+                    ) {
+                        selectedItem = item
+                    }
             ) {
                 RadioButton(
-                    selected = rememberObserver == item,
+                    selected = selectedItem == item,
                     onClick = {
-                        rememberObserver = item
-                    }
+                        selectedItem = item
+                    },
+                    interactionSource = localInteractionSource
                 )
                 Text(
-                    text = item,
-                    modifier = Modifier.clickable { rememberObserver = item }
+                    text = item
                 )
             }
         }

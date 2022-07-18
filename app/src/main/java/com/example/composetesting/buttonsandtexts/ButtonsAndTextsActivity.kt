@@ -47,7 +47,7 @@ class ButtonsAndTextsActivity : AppCompatActivity() {
                         )
                     }
                 ) {
-                    ButtonsScreen()
+                    ButtonsAndTextsScreen()
                 }
             }
         }
@@ -55,7 +55,7 @@ class ButtonsAndTextsActivity : AppCompatActivity() {
 }
 
 @Composable
-fun ButtonsScreen() {
+fun ButtonsAndTextsScreen() {
     val scrollState = rememberScrollState()
     var isDialogShown by remember { mutableStateOf(false) }
     var layoutId by remember { mutableStateOf("") }
@@ -67,7 +67,7 @@ fun ButtonsScreen() {
     ) {
         item {
             CompareItem(
-                title = "Buttons",
+                title = "Button",
                 composeActivity = ButtonComposeActivity::class.java,
                 androidViewActivity = ButtonViewActivity::class.java,
                 composeCodeClick = {
@@ -156,5 +156,5 @@ fun ButtonsScreen() {
 @Preview
 @Composable
 fun ButtonsScreenPreview() {
-
+    ButtonsAndTextsScreen()
 }
