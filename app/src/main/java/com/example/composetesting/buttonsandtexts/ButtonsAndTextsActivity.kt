@@ -29,9 +29,6 @@ import com.example.composetesting.buttonsandtexts.togglebutton.ToggleButtonViewA
 import com.example.composetesting.comparebutton.CompareItem
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
-// TODO: Refactor RadioGroup Compose Dialog string
-// TODO: Rearrange view RadioGroup, more center
-
 class ButtonsAndTextsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
