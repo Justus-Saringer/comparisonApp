@@ -3,12 +3,19 @@ package com.example.composetesting.buttonsandtexts.button
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.*
+import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
@@ -28,7 +35,7 @@ class ButtonComposeActivity : ComponentActivity() {
                         )
                     }, content = {
                         Box(
-                            modifier = Modifier.fillMaxSize(),
+                            modifier = Modifier.fillMaxSize().background(MaterialTheme.colors.background),
                             contentAlignment = Alignment.Center
                         ) {
                             ButtonExample()
@@ -42,12 +49,21 @@ class ButtonComposeActivity : ComponentActivity() {
 
 @Composable
 fun ButtonExample() {
-    Button(onClick = {  }) {
-        Text(text = "This is a text")
+    ComposeTestingTheme {
+        Button(
+            colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
+            shape = MaterialTheme.shapes.large,
+            onClick = {  }
+        ) {
+            Text(
+                text = "This is a text",
+                style = MaterialTheme.typography.body1
+            )
+        }
     }
 }
 
-@Preview
+@Preview(showSystemUi = true, showBackground = true, device = Devices.PIXEL_4)
 @Composable
 fun ButtonExamplePreview() {
     ComposeTestingTheme {
