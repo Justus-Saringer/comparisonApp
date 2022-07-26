@@ -1,8 +1,7 @@
 package com.example.composetesting
 
-import android.content.ActivityNotFoundException
-import android.content.Intent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -22,7 +21,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import androidx.core.content.ContextCompat.startActivity
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
 
@@ -34,7 +32,8 @@ fun CodeDialog(
     onDismiss: () -> Unit
 ) {
 
-    val scrollState = rememberScrollState()
+    val verticalScrollState = rememberScrollState()
+    val horizontalScrollState = rememberScrollState()
 
     Dialog(
         onDismissRequest = onDismiss,
@@ -45,14 +44,19 @@ fun CodeDialog(
                 .padding(16.dp)
                 .clip(RoundedCornerShape(10.dp))
                 .background(MaterialTheme.colors.background)
-                .verticalScroll(scrollState)
                 .padding(8.dp)
         ) {
-
-            Text(
-                modifier = Modifier.padding(16.dp),
-                text = getCode(id = codeId)
-            )
+            Column(
+                modifier = modifier
+                    .verticalScroll(verticalScrollState)
+                    .horizontalScroll(horizontalScrollState)
+                    .weight(1f, false)
+            ) {
+                Text(
+                    modifier = Modifier.padding(16.dp),
+                    text = getCode(id = codeId)
+                )
+            }
 
             Button(
                 modifier = Modifier
@@ -65,6 +69,7 @@ fun CodeDialog(
                 Text(text = "Verstanden")
             }
         }
+
     }
 }
 
@@ -82,13 +87,13 @@ private fun getCode(id: String): String {
 
         "compose_grid" -> stringResource(id = R.string.compose_grid)
         "view_grid" -> stringResource(id = R.string.view_grid)
-        
+
         "compose_button" -> stringResource(id = R.string.compose_button)
         "view_button" -> stringResource(id = R.string.view_button)
 
         "compose_text" -> stringResource(id = R.string.compose_text)
         "view_text" -> stringResource(id = R.string.view_text)
-        
+
         "compose_textfield" -> stringResource(id = R.string.compose_textfield)
         "view_textfield" -> stringResource(id = R.string.view_textfield)
 
@@ -100,6 +105,9 @@ private fun getCode(id: String): String {
 
         "compose_recycler" -> stringResource(id = R.string.compose_recycler)
         "view_recycler" -> "https://www.youtube.com/watch?v=UCddGYMQJCo"
+
+        "compose_toolbar" -> stringResource(id = R.string.compose_toolbar)
+        "view_toolbar" -> stringResource(id = R.string.view_toolbar)
         else -> {
             "An error occurred!"
         }
