@@ -22,6 +22,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.composetesting.bars.BarsActivity
 import com.example.composetesting.buttonsandtexts.ButtonsAndTextsActivity
 import com.example.composetesting.layouts.LayoutActivity
 import com.example.composetesting.recyclerviewandcolumns.RecyclerViewAndColumnsActivity
@@ -89,7 +90,7 @@ fun MainScreen() {
 
         item {
             StartButton(
-                composeActivity = null,
+                composeActivity = BarsActivity::class.java,
                 buttonText = "Bars",
                 backgroundColor = MaterialTheme.colors.secondary
             )

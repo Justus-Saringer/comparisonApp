@@ -235,7 +235,6 @@
         \t\t\t}\n
     }
     </string>
-
     <string name="compose_recycler">
     Column( ) {\n
         \t\t\tfor (i in 1 .. 5) {\n
@@ -245,4 +244,75 @@
         \t\t\t}\n
     }
     </string>
+
+    <string name="view_toolbar">
+    // XML Code\n
+        &lt;androidx.appcompat.widget.Toolbar\n
+            \t\t\tandroid:id="@+id/toolbar_example"\n
+            \t\t\tandroid:layout_width="match_parent"\n
+            \t\t\tandroid:layout_height="?attr/actionBarSize"\n
+            \t\t\tandroid:background="@color/davys_grey"\n
+            \t\t\tapp:layout_constraintEnd_toEndOf="parent"\n
+            \t\t\tapp:layout_constraintStart_toStartOf="parent"\n
+            \t\t\tapp:layout_constraintTop_toTopOf="parent"\n
+            \t\t\tapp:navigationIcon="@drawable/abc_vector_test"\n
+            \t\t\tapp:title="FrameLayout"\n
+            \t\t\tapp:titleTextColor="@color/alice_blue">\n
+        \n
+        &lt;ImageButton\n
+            \t\t\tandroid:layout_width="wrap_content"\n
+            \t\t\tandroid:layout_height="wrap_content"\n
+            \t\t\tandroid:layout_gravity="end"\n
+            \t\t\tandroid:background="@null"\n
+            \t\t\tandroid:layout_marginEnd="16dp"\n
+            \t\t\tandroid:src="@drawable/ic_baseline_favorite_24"\n
+            \t\t\tapp:tint="@color/white" />\n
+        \n
+    &lt;/androidx.appcompat.widget.Toolbar>\n
+        \n
+    // Code\n
+    binding?.toolbarExample?.setNavigationOnClickListener {\n
+        \t\t\tonBackPressed()\n
+    }
+    </string>
+    <string name="compose_toolbar">
+    setContent {\n
+        \t\t\tComposeTestingTheme {\n
+            \t\t\t\t\t\tScaffold(\n
+                \t\t\t\t\t\t\t\t\ttopBar = {\n
+                    \t\t\t\t\t\t\t\t\t\t\t\tTopAppBar(\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttitle = {\n
+                            \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tText(text = "Toolbar")\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t},\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tbackgroundColor = MaterialTheme.colors.primary,\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tnavigationIcon = {\n
+                            \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tIconButton(\n
+                                \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tonClick = { onBackPressed() }\n
+                            \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t) {\n
+                                \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tIcon(\n
+                                    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\timageVector = Icons.Default.ArrowBack,\n
+                                    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcontentDescription = null\n
+                                \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t)\n
+                            \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t},\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tactions = {\n
+                            \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tIconButton(\n
+                                \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tonClick = { }\n
+                            \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t) {\n
+                                \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tIcon(\n
+                                    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\timageVector = Icons.Default.Favorite,\n
+                                    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcontentDescription = null\n
+                                \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t)\n
+                            \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n
+                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n
+                    \t\t\t\t\t\t\t\t\t\t\t\t)\n
+                \t\t\t\t\t\t\t\t\t},\n
+                \t\t\t\t\t\t\t\t\tcontent = {\n
+        \n
+                \t\t\t\t\t\t\t\t\t}\n
+            \t\t\t\t\t\t)\n
+        \t\t\t}\n
+    }
+    </string>
+
 </resources>

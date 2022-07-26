@@ -24,6 +24,13 @@
             </intent-filter>
         </activity>
 
+        <!-- BarsActivity -->
+
+        <activity
+            android:name=".bars.BarsActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
         <!-- RecyclerViewAndColumnsActivity -->
 
         <activity
@@ -162,6 +169,18 @@
 
         <activity
             android:name=".recyclerviewandcolumns.ColumnComposeActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <!-- BarsActivities -->
+
+        <activity
+            android:name=".bars.toolbar.ToolbarComposeActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".bars.toolbar.ToolbarViewActivity"
             android:exported="false"
             android:screenOrientation="locked" />
 
