@@ -31,5 +31,4 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>
             itemText = itemView.findViewById<Button>(R.id.recycler_view_button).toString()
         }
     }
-
 }

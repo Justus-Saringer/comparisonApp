@@ -6,12 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,7 +30,9 @@ class ButtonComposeActivity : ComponentActivity() {
                         )
                     }, content = {
                         Box(
-                            modifier = Modifier.fillMaxSize().background(MaterialTheme.colors.background),
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(MaterialTheme.colors.background),
                             contentAlignment = Alignment.Center
                         ) {
                             ButtonExample()
@@ -49,17 +46,15 @@ class ButtonComposeActivity : ComponentActivity() {
 
 @Composable
 fun ButtonExample() {
-    ComposeTestingTheme {
-        Button(
-            colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
-            shape = MaterialTheme.shapes.large,
-            onClick = {  }
-        ) {
-            Text(
-                text = "This is a text",
-                style = MaterialTheme.typography.body1
-            )
-        }
+    Button(
+        colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
+        shape = MaterialTheme.shapes.large,
+        onClick = { }
+    ) {
+        Text(
+            text = "This is a text",
+            style = MaterialTheme.typography.body1
+        )
     }
 }
 

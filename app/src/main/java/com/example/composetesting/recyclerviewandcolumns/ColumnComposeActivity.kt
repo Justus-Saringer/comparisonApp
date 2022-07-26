@@ -3,10 +3,12 @@ package com.example.composetesting.recyclerviewandcolumns
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -30,7 +32,7 @@ class ColumnComposeActivity : ComponentActivity() {
                             backgroundColor = MaterialTheme.colors.primary
                         )
                     }, content = {
-                            ColumnExample()
+                        ColumnExample()
                     }
                 )
             }
@@ -40,14 +42,21 @@ class ColumnComposeActivity : ComponentActivity() {
 
 @Composable
 fun ColumnExample() {
-    Column(
-        modifier = Modifier.fillMaxSize(),
+
+    val scrollState = rememberScrollState()
+
+    LazyColumn(
+        modifier = Modifier
+            .fillMaxSize()
+            .scrollable(scrollState, Orientation.Vertical),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        for (i in 1 .. 5) {
-            Button(onClick = { }) {
-                Text(text = "$i. Button")
+        for (i in 1..5) {
+            item {
+                Button(onClick = { }) {
+                    Text(text = "$i. Button")
+                }
             }
         }
     }
