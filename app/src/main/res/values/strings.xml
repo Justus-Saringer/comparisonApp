@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Compose testing</string>
+    <string name="app_name">Compose Comparison</string>
     <string name="compose_constraint">
         val (text, button) = createRefs()\n\n
 
