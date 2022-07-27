@@ -17,6 +17,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composetesting.CodeDialog
+import com.example.composetesting.bars.bottomappbar.BottomAppBarComposeActivity
+import com.example.composetesting.bars.bottomappbar.BottomAppBarViewActivity
 import com.example.composetesting.bars.toolbar.ToolbarComposeActivity
 import com.example.composetesting.bars.toolbar.ToolbarViewActivity
 import com.example.composetesting.comparebutton.CompareItem
@@ -71,15 +73,21 @@ fun BarsScreen() {
             )
         }
 
-//        item {
-//            CompareItem(
-//                title = "BottomAppBar",
-//                composeActivity = ,
-//                androidViewActivity = ,
-//                composeCodeClick = { },
-//                viewCodeClick = { }
-//            )
-//        }
+        item {
+            CompareItem(
+                title = "BottomAppBar",
+                composeActivity = BottomAppBarComposeActivity::class.java,
+                androidViewActivity = BottomAppBarViewActivity::class.java,
+                composeCodeClick = {
+                    layoutId = "compose_bottomappbar"
+                    isDialogShown = true
+                },
+                viewCodeClick = {
+                    layoutId = "view_bottomappbar"
+                    isDialogShown = true
+                }
+            )
+        }
     }
 
     if (isDialogShown && layoutId.isNotEmpty()) {
