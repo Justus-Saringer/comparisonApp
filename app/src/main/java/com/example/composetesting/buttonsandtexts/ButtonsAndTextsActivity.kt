@@ -158,5 +158,7 @@ fun ButtonsAndTextsScreen() {
 @Preview(showBackground = true, showSystemUi = true, device = Devices.PIXEL_4)
 @Composable
 fun ButtonsScreenPreview() {
-    ButtonsAndTextsScreen()
+    ComposeTestingTheme() {
+        ButtonsAndTextsScreen()
+    }
 }
