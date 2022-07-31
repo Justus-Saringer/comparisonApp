@@ -28,9 +28,7 @@ import com.example.composetesting.layouts.LayoutActivity
 import com.example.composetesting.recyclerviewandcolumns.RecyclerViewAndColumnsActivity
 import com.example.composetesting.ui.theme.ComposeTestingTheme
 
-// TODO: set App Icon
 // TODO: turn off rotation and horizontal mode
-// TODO: change color of the top part in the app
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
