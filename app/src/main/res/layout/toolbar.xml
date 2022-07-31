@@ -13,7 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/abc_vector_test"
-        app:title="FrameLayout"
+        app:title="Toolbar"
         app:titleTextColor="@color/alice_blue">
 
         <ImageButton
