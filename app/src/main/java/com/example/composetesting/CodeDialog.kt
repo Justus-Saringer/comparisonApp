@@ -112,6 +112,8 @@ private fun getCode(id: String): String {
 //        "compose_bottomappbar" -> stringResource(id = R.string.compose_bottomappbar)
 //        "view_bottomappbar" -> stringResource(id = R.string.view_bottomappbar)
 
+        "customView" -> stringResource(id = R.string.customView)
+
         else -> {
             "An error occurred!"
         }

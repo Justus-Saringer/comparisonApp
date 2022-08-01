@@ -61,11 +61,11 @@ fun MoreScreen() {
                 composeActivity = CustomViewComposeActivity::class.java,
                 androidViewActivity = CustomViewViewActivity::class.java,
                 composeCodeClick = {
-                    layoutId = "compose_custom"
+                    layoutId = "customView"
                     isDialogShown = true
                 },
                 viewCodeClick = {
-                    layoutId = "view_custom"
+                    layoutId = "customView"
                     isDialogShown = true
                 }
             )

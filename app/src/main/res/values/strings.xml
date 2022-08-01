@@ -315,4 +315,9 @@
     }
     </string>
 
+    <string name="customView">
+        This is quite complex!\n
+        Please look into the source code.
+    </string>
+
 </resources>
