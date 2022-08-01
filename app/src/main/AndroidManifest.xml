@@ -24,6 +24,13 @@
             </intent-filter>
         </activity>
 
+        <!-- MoreActivities -->
+
+        <activity
+            android:name=".more.MoreActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
         <!-- BarsActivity -->
 
         <activity
@@ -193,6 +200,18 @@
 
         <activity
             android:name=".bars.bottomappbar.BottomAppBarViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <!-- CustomView Activities -->
+
+        <activity
+            android:name=".more.custom.CustomViewViewActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+
+        <activity
+            android:name=".more.custom.CustomViewComposeActivity"
             android:exported="false"
             android:screenOrientation="locked" />
 

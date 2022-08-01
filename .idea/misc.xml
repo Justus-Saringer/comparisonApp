@@ -8,6 +8,17 @@
         <entry key="../../../../../../layout/compose-model-1658237750701.xml" value="0.3349220103986135" />
         <entry key="../../../../../../layout/compose-model-1658238114423.xml" value="0.34444444444444444" />
         <entry key="../../../../../../layout/compose-model-1658244158913.xml" value="0.3349220103986135" />
+        <entry key="../../../../../../layout/compose-model-1659294991690.xml" value="0.49090121317157714" />
+        <entry key="../../../../../../layout/compose-model-1659295040683.xml" value="0.49090121317157714" />
+        <entry key="../../../../../../layout/compose-model-1659304523520.xml" value="0.4111111111111111" />
+        <entry key="../../../../../../layout/compose-model-1659357936882.xml" value="0.35225303292894283" />
+        <entry key="../../../../../../layout/compose-model-1659358111513.xml" value="0.36462264150943396" />
+        <entry key="../../../../../../layout/compose-model-1659358114752.xml" value="0.1" />
+        <entry key="../../../../../../layout/compose-model-1659359536787.xml" value="0.2101851851851852" />
+        <entry key="../../../../../../layout/compose-model-1659360185423.xml" value="0.5407407407407407" />
+        <entry key="../../../../../../layout/compose-model-1659373168845.xml" value="0.3349220103986135" />
+        <entry key="../../../../../../layout/compose-model-1659373347706.xml" value="0.39537037037037037" />
+        <entry key="../../../../../../layout/compose-model-1659378388095.xml" value="0.5407407407407407" />
         <entry key="../../../../../layout/compose-model-1657657071983.xml" value="0.4242658423493045" />
         <entry key="../../../../../layout/compose-model-1657658634717.xml" value="0.4242658423493045" />
         <entry key="../../../../../layout/compose-model-1657662412972.xml" value="0.1" />
@@ -29,6 +40,8 @@
         <entry key="app/src/main/res/layout/bottom_app_bar.xml" value="0.44548952543822146" />
         <entry key="app/src/main/res/layout/button.xml" value="0.3507809202195019" />
         <entry key="app/src/main/res/layout/constraintlayout.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/custom_view.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/custom_view_layout.xml" value="0.4861111111111111" />
         <entry key="app/src/main/res/layout/framelayout.xml" value="0.3049119555143652" />
         <entry key="app/src/main/res/layout/layout1.xml" value="0.396875" />
         <entry key="app/src/main/res/layout/linearlayout.xml" value="0.3507809202195019" />
@@ -37,7 +50,7 @@
         <entry key="app/src/main/res/layout/recyclerview.xml" value="0.38461538461538464" />
         <entry key="app/src/main/res/layout/text.xml" value="0.1" />
         <entry key="app/src/main/res/layout/togglebutton.xml" value="0.3507809202195019" />
-        <entry key="app/src/main/res/layout/toolbar.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.5635416666666667" />
       </map>
     </option>
   </component>
