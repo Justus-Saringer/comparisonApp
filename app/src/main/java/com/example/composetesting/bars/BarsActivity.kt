@@ -73,7 +73,7 @@ fun BarsScreen() {
             )
         }
 
-        item {
+        /*item {
             CompareItem(
                 title = "BottomAppBar",
                 composeActivity = BottomAppBarComposeActivity::class.java,
@@ -87,7 +87,7 @@ fun BarsScreen() {
                     isDialogShown = true
                 }
             )
-        }
+        }*/
     }
 
     if (isDialogShown && layoutId.isNotEmpty()) {
