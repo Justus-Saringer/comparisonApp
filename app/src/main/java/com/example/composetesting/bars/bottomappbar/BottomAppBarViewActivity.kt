@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.composetesting.R
 import com.example.composetesting.databinding.BottomAppBarBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BottomAppBarViewActivity : AppCompatActivity() {
 

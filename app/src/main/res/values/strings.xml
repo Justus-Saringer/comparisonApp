@@ -320,4 +320,9 @@
         Please look into the source code.
     </string>
 
+    <string name="bottomAppBar">
+        This is quite complex!\n
+        Please look into the source code.
+    </string>
+
 </resources>
